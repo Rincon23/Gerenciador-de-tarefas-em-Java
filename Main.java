@@ -20,9 +20,16 @@ public class Main {
                 Deletar deletar = new Deletar();
                 deletar.Deletando();
                     break;
+
+                case 3:
+                Exibir exibir = new Exibir();
+                exibir.ExibirTarefas();
+                    break;
             }
         }
         scanner.close();
+        System.out.println("Você saiu do programa");
+        System.exit(0);
     }
 }
 

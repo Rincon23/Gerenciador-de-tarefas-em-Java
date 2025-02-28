@@ -11,12 +11,13 @@ public class Inserir {
         System.out.println("Qual é o nome da tarefa: ");
         String nome = scanner.nextLine();
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Tarefas.txt"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Tarefas.txt", true))) {
             writer.write(nome);
             writer.newLine();
         }   catch (IOException e) {
                 e.printStackTrace();
             }
+                System.out.println("\n");
                 System.out.println("Tarefa gravada no arquivo");
     }
 }
